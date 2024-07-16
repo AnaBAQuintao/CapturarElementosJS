@@ -20,3 +20,28 @@ console.log(elementoPorQueryAll)
 
 const elementoPorQueryAll2 = document.querySelectorAll("footer .lista_redes a");
 console.log(elementoPorQueryAll2)
+
+const redes = document.querySelectorAll("footer .lista_redes a")
+ 
+function imprimirRedes(lista) {
+    for(let i = 0; i < lista.length; i++){
+        console.log(lista[i].innerText)
+    }
+}
+ 
+imprimirRedes(redes)
+ 
+const btn = document.querySelector("button")
+console.log(btn)
+ 
+const post = document.getElementById("posts");
+console.log(post)
+ 
+let postsVisiveis = true
+ 
+function sumir(){
+    postsVisiveis = !postsVisiveis
+    const novoTexto = postsVisiveis ? "Esconder posts" : "Mostrar Posts"
+    btn.innerText = novoTexto
+    post.style.display = postsVisiveis ? "block" : "none"
+}
